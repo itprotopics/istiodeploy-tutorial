@@ -1,6 +1,8 @@
 server:
-  port: 8083
-  
-endpoints:
-  health:
-    enabled: false
+  port: 8080
+ 
+
+management:
+  endpoint:
+    health:
+      enabled: false

@@ -1,0 +1,13 @@
+server:
+  port: 8280
+  
+capadosservice:
+  api:
+#    url: http://capadosservice:8180/recursoscapados
+    url: http://localhost:8180/recursoscapados
+    
+
+management:
+  endpoint:
+    health:
+      enabled: false

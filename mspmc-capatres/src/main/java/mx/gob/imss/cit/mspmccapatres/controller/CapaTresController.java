@@ -59,7 +59,6 @@ public class CapaTresController {
 	        model = capaTresService.consultarDato();
 	        
 	        model.setCount(count);
-	        model.setHostname(HOSTNAME);
 	        respuesta = new ResponseEntity<CapaTresModel>(model, HttpStatus.OK);
 	        
         }

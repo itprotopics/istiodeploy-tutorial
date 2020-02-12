@@ -8,6 +8,6 @@ public class CapaTresModel {
 	private String nombreCapa;
 	private String dato;
 	private Integer count;
-	private String hostname;
+
 	
 }
