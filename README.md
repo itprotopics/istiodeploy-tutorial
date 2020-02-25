@@ -5,13 +5,11 @@
 
 # istiodeploy-tutorial
 
-Este tutorial tiene por objetivo mostrar la configuración mínima que se requiere para desplegar un microservicio 
-
-Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
+Este tutorial tiene por objetivo mostrar la configuración mínima que se requiere para desplegar un microservicio Spring Boot en [Istio Service mesh](https://istio.io/).
 
 # Tabla de contenido
 
-- [Files](#files).
+- [Instalación de minish](#files).
 - [Create files and folders](#create-files-and-folders).
 
 
@@ -156,6 +154,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MTU3NDc1NywxNjMyODk2NDQ5LDc0MD
-EwNDEyNCwxMjU4ODIyODk3XX0=
+eyJoaXN0b3J5IjpbLTEzNzM3NzY0MjcsMTYzMjg5NjQ0OSw3ND
+AxMDQxMjQsMTI1ODgyMjg5N119
 -->
