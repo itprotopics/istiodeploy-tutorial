@@ -10,7 +10,7 @@ El tutorial supone que en el equipo host está instalado [Oracle Virtual Box](ht
 # Tabla de contenido
 
 - [Instalación de docker-ce](#instalación-de-docker-ce).
-- [Create files and folders](#create-files-and-folders).
+- [Instalación de minishift](#instalación-de-minishift).
 
 
 
@@ -18,6 +18,8 @@ El tutorial supone que en el equipo host está instalado [Oracle Virtual Box](ht
 # Instalación de docker-ce
 
 
+
+# Instalación de minishift
 
 StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
 
@@ -156,6 +158,7 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzNTIyMDcwOSw2MDQzNjUzMjYsMTYzMj
-g5NjQ0OSw3NDAxMDQxMjQsMTI1ODgyMjg5N119
+eyJoaXN0b3J5IjpbMTAzMDE4NzEyLC00MzUyMjA3MDksNjA0Mz
+Y1MzI2LDE2MzI4OTY0NDksNzQwMTA0MTI0LDEyNTg4MjI4OTdd
+fQ==
 -->
