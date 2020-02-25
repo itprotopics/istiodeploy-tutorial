@@ -5,17 +5,15 @@ Este tutorial tiene por objetivo mostrar la configuración mínima que se requie
 
 El tutorial está basado en la instalación de [minishift versión 1.34.2](https://github.com/minishift/minishift/releases/tag/v1.34.2) sobre Ubuntu 18.04 y usando la [versión 1.4.5 de Istio](https://github.com/istio/istio/releases/tag/1.4.5).
 
-El tutorial supone que en el equipo host está instalado [Oracle Virtual Box](https://www.virtualbox.org/). La versión de 
+El tutorial supone que en el equipo host está instalado [Oracle Virtual Box](https://www.virtualbox.org/). La versión que se utilizó para este caso fue la 5.2.34_Ubuntu r133883.
 
 # Tabla de contenido
 
-- [Instalación de minishift](#instalación-de-minishift).
+- [Instalación de docker-ce](#instalación-de-doce).
 - [Create files and folders](#create-files-and-folders).
 
 
-# Prerequisitos
 
-* Tener instalado Virtual Box
 
 # Instalación de docker-ce
 
@@ -158,6 +156,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5MTcxNDMwLDYwNDM2NTMyNiwxNjMyOD
+eyJoaXN0b3J5IjpbNjk5MjU0OTU5LDYwNDM2NTMyNiwxNjMyOD
 k2NDQ5LDc0MDEwNDEyNCwxMjU4ODIyODk3XX0=
 -->
