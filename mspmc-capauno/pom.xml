@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>mx.gob.imss.cit.mspmccapauno</groupId>
-	<artifactId>mspmc-capauno</artifactId>
+	<artifactId>mspmccapauno</artifactId>
 	<version>1.0</version>
-	<name>mspmc-capauno</name>
+	<name>mspmccapauno</name>
 	<description>Demo project for Spring Boot MS capa uno</description>
 
 	<properties>
@@ -28,6 +28,11 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
+            <groupId>io.opentracing.contrib</groupId>
+            <artifactId>opentracing-spring-cloud-starter</artifactId>
+            <version>0.3.6</version>
+        </dependency>
+        <dependency>
             <groupId>io.jaegertracing</groupId>
             <artifactId>jaeger-tracerresolver</artifactId>
             <version>1.0.0</version>
@@ -42,6 +47,10 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.jolokia</groupId>
+			<artifactId>jolokia-core</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

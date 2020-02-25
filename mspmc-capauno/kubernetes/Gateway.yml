@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: customer-gateway
+  name: mspmccapauno-gateway
 spec:
   selector:
     istio: ingressgateway # use istio default controller
@@ -16,20 +16,20 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: customer-gateway
+  name: mspmccapauno-gateway
 spec:
   hosts:
   - "*"
   gateways:
-  - customer-gateway
+  - mspmccapauno-gateway
   http:
   - match:
     - uri:
-        prefix: /customer
+        prefix: /mspmccapauno
     rewrite:
       uri: /
     route:
     - destination:
-        host: customer
+        host: mspmccapauno
         port:
           number: 8080

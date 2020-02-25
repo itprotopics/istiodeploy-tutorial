@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: customer
+  name: mspmccapauno
   labels:
-    app: customer    
+    app: mspmccapauno    
 spec:
   ports:
   - name: http
     port: 8080
   selector:
-    app: customer
+    app: mspmccapauno

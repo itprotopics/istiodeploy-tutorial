@@ -2,19 +2,19 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    app: recommendation
+    app: capatresservice
     version: v1
-  name: recommendation-v1
+  name: capatresservice-v1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: recommendation
+      app: capatresservice
       version: v1
   template:
     metadata:
       labels:
-        app: recommendation
+        app: capatresservice
         version: v1
       annotations:
         sidecar.istio.io/inject: "true"
@@ -23,8 +23,8 @@ spec:
       - env:
         - name: JAVA_OPTIONS
           value: -Xms15m -Xmx15m -Xmn15m
-        name: recommendation          
-        image: quay.io/rhdevelopers/istio-tutorial-recommendation:v1.1
+        name: capatresservice          
+        image: quay.io/rhdevelopers/istio-tutorial-capatresservice:v1.1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
@@ -61,3 +61,4 @@ spec:
           timeoutSeconds: 1
         securityContext:
           privileged: false
+          

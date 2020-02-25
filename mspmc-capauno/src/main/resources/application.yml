@@ -3,11 +3,14 @@ server:
   
 capadosservice:
   api:
-#    url: http://capadosservice:8180/recursoscapados
-    url: http://localhost:8180/recursoscapados
+    url: http://capadosservice:8080/recursoscapados
+#    url: http://localhost:8180/recursoscapados
     
 
 management:
   endpoint:
     health:
       enabled: false
+    jokolia:
+      enabled: false
+

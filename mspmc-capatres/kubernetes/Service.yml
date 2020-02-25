@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: recommendation
+  name: capatresservice
   labels:
-    app: recommendation    
+    app: capatresservice    
 spec:
   ports:
   - name: http
     port: 8080
   selector:
-    app: recommendation
+    app: capatresservice
