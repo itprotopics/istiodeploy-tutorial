@@ -15,7 +15,7 @@ El tutorial está basado en la instalación de [minishift versión 1.34.2](https
 - [Create files and folders](#create-files-and-folders).
 
 
-# Files
+# Instalación de minishift
 
 
 
@@ -156,6 +156,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MDM3MDk1NywxNjMyODk2NDQ5LDc0MD
-EwNDEyNCwxMjU4ODIyODk3XX0=
+eyJoaXN0b3J5IjpbMzcwNzUwMzcsMTYzMjg5NjQ0OSw3NDAxMD
+QxMjQsMTI1ODgyMjg5N119
 -->
