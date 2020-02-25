@@ -7,20 +7,24 @@
 
 Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
 
+
 `**Índice**`
 
 `1. [Primer apartado](#id1)`
 
 `2. [Segundo apartado](#id2)`
 
-`## Primer apartado<a name="id1"></a>`
+`<div id='id1' />`
+
+`## Primer apartado`
 
 `Texto del primer apartado`
 
-`## Segundo apartado<a name="id2"></a>`
+`<div id='id2' />`
+
+`## Segundo apartado`
 
 `Texto del segundo apartado`
-
 
 # Files
 
@@ -163,6 +167,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY3NzY4MzkxLDc0MDEwNDEyNCwxMjU4OD
-IyODk3XX0=
+eyJoaXN0b3J5IjpbMTYzMjg5NjQ0OSw3NDAxMDQxMjQsMTI1OD
+gyMjg5N119
 -->
