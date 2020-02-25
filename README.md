@@ -19,16 +19,18 @@ El tutorial supone que en el equipo host está instalado [Oracle Virtual Box](ht
 
 Para instalar docker-ce puede seguir los siguientes pasos:
 
-    $ sudo apt-get install apt-transport-https ca-certificates software-properties-common
-    curl gnupg-agent
+        $ sudo apt-get install apt-transport-https ca-certificates  curl gnupg-agent software-properties-common
+    
     $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-    $ sudo add-apt-repository "deb [arch=amd64]
-    https://download.docker.com/linux/ubuntu $(lsb_release -cs)
-    stable"
+    
+    $ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs)  stable"
+    
     $ sudo apt update
     $ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+    
     #Verificar la instalacion
-    $ sudo usermod -aG docker $USERenter code here
+    
+    $ sudo usermod -aG docker $USER
 
 # Instalación de minishift
 
@@ -169,7 +171,7 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI0ODU1MzYyLC00MzUyMjA3MDksNjA0Mz
+eyJoaXN0b3J5IjpbOTkyMjA5Mjk1LC00MzUyMjA3MDksNjA0Mz
 Y1MzI2LDE2MzI4OTY0NDksNzQwMTA0MTI0LDEyNTg4MjI4OTdd
 fQ==
 -->
