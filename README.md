@@ -7,9 +7,10 @@
 
 Este tutorial tiene por objetivo mostrar la configuración mínima que se requiere para desplegar un microservicio Spring Boot en [Istio Service mesh](https://istio.io/).
 
+El tutorial está basado en la instalación de minishift versión 1.34.2
 # Tabla de contenido
 
-- [Instalación de minish](#files).
+- [Instalación de minishift](#files).
 - [Create files and folders](#create-files-and-folders).
 
 
@@ -154,6 +155,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzM3NzY0MjcsMTYzMjg5NjQ0OSw3ND
-AxMDQxMjQsMTI1ODgyMjg5N119
+eyJoaXN0b3J5IjpbMTY5Nzk0MTgyMSwxNjMyODk2NDQ5LDc0MD
+EwNDEyNCwxMjU4ODIyODk3XX0=
 -->
