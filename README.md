@@ -7,7 +7,7 @@
 
 Este tutorial tiene por objetivo mostrar la configuración mínima que se requiere para desplegar un microservicio Spring Boot en [Istio Service mesh](https://istio.io/).
 
-El tutorial está basado en la instalación de [minishift versión 1.34.2](https://github.com/minishift/minishift/releases/tag/v1.34.2) montado en una máquina Ubuntu 18.04 e Istio release 1.4.5
+El tutorial está basado en la instalación de [minishift versión 1.34.2](https://github.com/minishift/minishift/releases/tag/v1.34.2) montado en una máquina Ubuntu 18.04 e [Istio release 1.4.5](https://github.com/istio/istio/releases/tag/1.4.5)
 
 # Tabla de contenido
 
@@ -156,6 +156,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjYzMjY1MjYzLDE2MzI4OTY0NDksNzQwMT
+eyJoaXN0b3J5IjpbLTUwOTYwMTA4LDE2MzI4OTY0NDksNzQwMT
 A0MTI0LDEyNTg4MjI4OTddfQ==
 -->
