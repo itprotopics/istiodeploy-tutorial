@@ -9,18 +9,8 @@ Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about St
 
 # Tabla de contenido
 
-- [File](#files).
-- [Cursivas](#cursivas).
-- [Negrilla](#negrilla).
-- [Viñetas para tablas de contenido](#vinetas).
-- [insertar imágenes](#insertar-imagenes).
-- [Insertar enlaces](#insertar-enlaces).
-- [Hacer anclaje](#hacer-anclaje).
-- [Insertar una línea de código](#insertar-una-linea-de-codigo).
-- [Insertar un bloque de código](#insertar-un-bloque-de-codigo).
-- [Resaltar el código](#resaltar-el-codigo).
-- [Insertar tablas](#insertar-tablas).
-- [Otras referencias sobre Markdown](#otras-referencias-sobre-markdown).
+- [Files](#files).
+- [Create files and folders](#create-files-and-folders).
 
 
 # Files
@@ -164,6 +154,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDM2NjU5MjMsMTYzMjg5NjQ0OSw3ND
-AxMDQxMjQsMTI1ODgyMjg5N119
+eyJoaXN0b3J5IjpbLTEwMzU1MDcxOCwxNjMyODk2NDQ5LDc0MD
+EwNDEyNCwxMjU4ODIyODk3XX0=
 -->
