@@ -11,7 +11,11 @@ El tutorial está basado en la instalación de [minishift versión 1.34.2](https
 - [Create files and folders](#create-files-and-folders).
 
 
-# Instalación de minishift
+# Prerequisitos
+
+* Tener instalado docker-ce, se puede usar est
+
+# Instalación de docker-ce
 
 
 
@@ -152,6 +156,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjUxMzYwMCwxNjMyODk2NDQ5LDc0MD
+eyJoaXN0b3J5IjpbLTMwMjA5OTUyNiwxNjMyODk2NDQ5LDc0MD
 EwNDEyNCwxMjU4ODIyODk3XX0=
 -->
