@@ -20,7 +20,8 @@ Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about St
 
 1. [Files] (#files)
 
-# Files <a name="files"></a>
+# Files  [](#){name=files}
+
 
 
 StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
@@ -160,5 +161,5 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4NTMwNjY1NiwxNDEzNzM5MDc0XX0=
+eyJoaXN0b3J5IjpbMTkwODkzMDk5NSwxNDEzNzM5MDc0XX0=
 -->
