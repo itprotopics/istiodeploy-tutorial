@@ -32,6 +32,8 @@ En este punto es recomendable salir de la sesión de ssh o la terminal activa y 
 
 # Instalación de minishift
 
+## Create files and folders
+
 StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
 
 ## Create files and folders
@@ -169,7 +171,7 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwNTkzODgyMSwtNDM1MjIwNzA5LDYwND
-M2NTMyNiwxNjMyODk2NDQ5LDc0MDEwNDEyNCwxMjU4ODIyODk3
-XX0=
+eyJoaXN0b3J5IjpbLTQzMDc5NjAxMiwxMDA1OTM4ODIxLC00Mz
+UyMjA3MDksNjA0MzY1MzI2LDE2MzI4OTY0NDksNzQwMTA0MTI0
+LDEyNTg4MjI4OTddfQ==
 -->
