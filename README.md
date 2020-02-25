@@ -7,24 +7,21 @@
 
 Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
 
+# Tabla de contenido
 
-`**Índice**`
+- [File](#files).
+- [Cursivas](#cursivas).
+- [Negrilla](#negrilla).
+- [Viñetas para tablas de contenido](#vinetas).
+- [insertar imágenes](#insertar-imagenes).
+- [Insertar enlaces](#insertar-enlaces).
+- [Hacer anclaje](#hacer-anclaje).
+- [Insertar una línea de código](#insertar-una-linea-de-codigo).
+- [Insertar un bloque de código](#insertar-un-bloque-de-codigo).
+- [Resaltar el código](#resaltar-el-codigo).
+- [Insertar tablas](#insertar-tablas).
+- [Otras referencias sobre Markdown](#otras-referencias-sobre-markdown).
 
-`1. [Primer apartado](#id1)`
-
-`2. [Segundo apartado](#id2)`
-
-`<div id='id1' />`
-
-`## Primer apartado`
-
-`Texto del primer apartado`
-
-`<div id='id2' />`
-
-`## Segundo apartado`
-
-`Texto del segundo apartado`
 
 # Files
 
@@ -167,6 +164,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzMjg5NjQ0OSw3NDAxMDQxMjQsMTI1OD
-gyMjg5N119
+eyJoaXN0b3J5IjpbLTE1NDM2NjU5MjMsMTYzMjg5NjQ0OSw3ND
+AxMDQxMjQsMTI1ODgyMjg5N119
 -->
