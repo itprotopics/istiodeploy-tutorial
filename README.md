@@ -13,7 +13,7 @@ El tutorial está basado en la instalación de [minishift versión 1.34.2](https
 
 # Prerequisitos
 
-* Tener instalado docker-ce, se puede usar est
+* Tener instalado docker-ce, se puede usar estas inst
 
 # Instalación de docker-ce
 
@@ -156,6 +156,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwMjA5OTUyNiwxNjMyODk2NDQ5LDc0MD
-EwNDEyNCwxMjU4ODIyODk3XX0=
+eyJoaXN0b3J5IjpbNjA0MzY1MzI2LDE2MzI4OTY0NDksNzQwMT
+A0MTI0LDEyNTg4MjI4OTddfQ==
 -->
