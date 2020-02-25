@@ -9,7 +9,7 @@ El tutorial supone que en el equipo host está instalado [Oracle Virtual Box](ht
 
 # Tabla de contenido
 
-- [Instalación de docker-ce](#instalación-de-doce).
+- [Instalación de docker-ce](#instalación-de-docker-ce).
 - [Create files and folders](#create-files-and-folders).
 
 
@@ -156,6 +156,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk5MjU0OTU5LDYwNDM2NTMyNiwxNjMyOD
-k2NDQ5LDc0MDEwNDEyNCwxMjU4ODIyODk3XX0=
+eyJoaXN0b3J5IjpbLTQzNTIyMDcwOSw2MDQzNjUzMjYsMTYzMj
+g5NjQ0OSw3NDAxMDQxMjQsMTI1ODgyMjg5N119
 -->
