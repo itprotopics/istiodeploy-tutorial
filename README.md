@@ -18,8 +18,9 @@ Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about St
 
 # Tabla de contenido
 
-1. [Files] (#Create files and folders)
+1. [Files] (#files)
 
+<a  name="files"></a>
 # Files
 
 
@@ -161,5 +162,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MTkyOTAyMCwxNDEzNzM5MDc0XX0=
+eyJoaXN0b3J5IjpbLTEzODA5ODk5ODYsMTE5MTkyOTAyMCwxND
+EzNzM5MDc0XX0=
 -->
