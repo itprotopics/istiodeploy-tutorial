@@ -9,26 +9,33 @@ El tutorial supone que en el equipo host está instalado [Oracle Virtual Box](ht
 
 # Tabla de contenido
 
-- [Instalación de docker-ce](#instalación-de-docker-ce).
-- [Instalación de minishift](#instalación-de-minishift).
+
+
+[TOC]
+
+
 
 # Instalación de docker-ce
 
 Para instalar docker-ce puede seguir los siguientes pasos:
 
-    $ sudo apt-get install apt-transport-https ca-certificates  curl gnupg-agent software-properties-common
-    
-    $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-    
-    $ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs)  stable"
-    
-    $ sudo apt update
-    $ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
-    
-    #Verificar la instalacion
-    $ sudo usermod -aG docker $USER
+```bash
+$ sudo apt-get install apt-transport-https ca-certificates  curl gnupg-agent software-properties-common
+
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs)  stable"
+
+$ sudo apt update
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+
+#Verificar la instalacion
+$ sudo usermod -aG docker $USER
+```
 
 En este punto es recomendable salir de la sesión de ssh o la terminal activa y volver a ingresar a la misma.
+
+
 
 # Instalación de minishift
 
@@ -64,9 +71,11 @@ Synchronization is one of the biggest features of StackEdit. It enables you to s
 There are two types of synchronization and they can complement each other:
 
 - The workspace synchronization will sync all your files, folders and settings automatically. This will allow you to fetch your workspace on any other device.
-	> To start syncing your workspace, just sign in with Google in the menu.
-
+	
+> To start syncing your workspace, just sign in with Google in the menu.
+	
 - The file synchronization will keep one file of the workspace synced with one or multiple files in **Google Drive**, **Dropbox** or **GitHub**.
+	
 	> Before starting to sync files, you must link an account in the **Synchronize** sub-menu.
 
 ## Open a file
