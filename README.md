@@ -5,12 +5,24 @@ Este tutorial tiene por objetivo mostrar la configuración mínima que se requie
 
 El tutorial está basado en la instalación de [minishift versión 1.34.2](https://github.com/minishift/minishift/releases/tag/v1.34.2) sobre Ubuntu 18.04 y usando la [versión 1.4.5 de Istio](https://github.com/istio/istio/releases/tag/1.4.5).
 
-El tutorial supone que en el equipo host está instalado [Oracle Virtual Box](https://www.virtualbox.org/). La versión que se utilizó para este caso fue la 5.2.34_Ubuntu r133883.
+El tutorial supone que en el equipo host está instalado [Oracle Virtual Box](https://www.virtualbox.org/). La versión que se utilizó para este tutorial es la 5.2.34_Ubuntu r133883.
 
-# Tabla de contenido
+# Tabla de contenido 
 
-
-[[TOC]]
+1. [istiodeploy-tutorial](#istiodeploy-tutorial)
+2. [Tabla de contenido](#tabla-de-contenido)
+3. [Instalación de docker-ce](#instalación-de-docker-ce)
+4. [Instalación de minishift](#instalación-de-minishift)
+	1. [Configurar primera ejecución de minishift](#configurar-primera-ejecución-de-minishift)
+	2. [Levantar el cluster de minishift](#levantar-el-cluster-de-minishift)
+		1. [Validar la instalación de la consola de minishift](#validar-la-instalación-de-la-consola-de-minishift)
+		2. [Configurar la variable PATH](#configurar-la-variable-path)
+		3. [Conectarse al cluster de minishift](#conectarse-al-cluster-de-minishift)
+5. [Instalación de Istio](#instalación-de-istio)
+	1. [Descargar Istio Service Mesh](#descargar-istio-service-mesh)
+	2. [Configurar la variable PATH](#configurar-la-variable-path-1)
+	3. [Desplegar los pods de istio en minishift](#desplegar-los-pods-de-istio-en-minishift)
+	4. [Levantar servicios básicos](#levantar-servicios-básicos)
 
 
 # Instalación de docker-ce
@@ -27,158 +39,183 @@ $ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ub
 $ sudo apt update
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
-#Verificar la instalacion
+# Verificar la instalacion
 $ sudo usermod -aG docker $USER
 ```
 
 En este punto es recomendable salir de la sesión de ssh o la terminal activa y volver a ingresar a la misma.
 
-
-
 # Instalación de minishift
 
-## Create files and folders
-
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
-
-## Create files and folders
-
-The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
-
-## Switch to another file
-
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
-
-## Rename a file
-
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
-
-## Delete a file
-
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
-
-## Export a file
-
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
+Descargar minishift de https://github.com/minishift/minishift/releases/download/v1.34.2/minishift-1.34.2-linux-amd64.tgz
 
 
-# Synchronization
+```bash
+$ mkdir installMinishift
+$ cd installMinishift
+$ wget https://github.com/minishift/minishift/releases/download/v1.34.2/minishift-1.34.2-linux-amd64.tgz
+$ tar zxvf minishift-1.34.2-linux-amd64.tgz
 
-Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your **Google Drive**, your **Dropbox** and your **GitHub** accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow... The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.
+$ cd minishift-1.34.2-linux-amd64
+$ pwd
 
-There are two types of synchronization and they can complement each other:
+# Agregar la salida del comando pwd a la variable MINISHIFT_HOME en el archivo .bashrc
+export MINISHIFT_HOME=...
+export PATH=$PATH:MINISHIFT_HOME
 
-- The workspace synchronization will sync all your files, folders and settings automatically. This will allow you to fetch your workspace on any other device.
-	
-> To start syncing your workspace, just sign in with Google in the menu.
-	
-- The file synchronization will keep one file of the workspace synced with one or multiple files in **Google Drive**, **Dropbox** or **GitHub**.
-	
-	> Before starting to sync files, you must link an account in the **Synchronize** sub-menu.
+# Una vez que se hayan agregado las variables anteriores al archivo .bashrc ejecutar:
+$ cd
+$ . ./.bashrc
 
-## Open a file
-
-You can open a file from **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Open from**. Once opened in the workspace, any modification in the file will be automatically synced.
-
-## Save a file
-
-You can save any file of the workspace to **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Save on**. Even if a file in the workspace is already synced, you can save it to another location. StackEdit can sync one file with multiple locations and accounts.
-
-## Synchronize a file
-
-Once your file is linked to a synchronized location, StackEdit will periodically synchronize it by downloading/uploading any modification. A merge will be performed if necessary and conflicts will be resolved.
-
-If you just have modified your file and you want to force syncing, click the **Synchronize now** button in the navigation bar.
-
-> **Note:** The **Synchronize now** button is disabled if you have no file to synchronize.
-
-## Manage file synchronization
-
-Since one file can be synced with multiple locations, you can list and manage synchronized locations by clicking **File synchronization** in the **Synchronize** sub-menu. This allows you to list and remove synchronized locations that are linked to your file.
-
-
-# Publication
-
-Publishing in StackEdit makes it simple for you to publish online your files. Once you're happy with a file, you can publish it to different hosting platforms like **Blogger**, **Dropbox**, **Gist**, **GitHub**, **Google Drive**, **WordPress** and **Zendesk**. With [Handlebars templates](http://handlebarsjs.com/), you have full control over what you export.
-
-> Before starting to publish, you must link an account in the **Publish** sub-menu.
-
-## Publish a File
-
-You can publish your file by opening the **Publish** sub-menu and by clicking **Publish to**. For some locations, you can choose between the following formats:
-
-- Markdown: publish the Markdown text on a website that can interpret it (**GitHub** for instance),
-- HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
-
-## Update a publication
-
-After publishing, StackEdit keeps your file linked to that publication which makes it easy for you to re-publish it. Once you have modified your file and you want to update your publication, click on the **Publish now** button in the navigation bar.
-
-> **Note:** The **Publish now** button is disabled if your file has not been published yet.
-
-## Manage file publication
-
-Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
-
-
-# Markdown extensions
-
-StackEdit extends the standard Markdown syntax by adding extra **Markdown extensions**, providing you with some nice features.
-
-> **ProTip:** You can disable any **Markdown extension** in the **File properties** dialog.
-
-
-## SmartyPants
-
-SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
-
-|                |ASCII                          |HTML                         |
-|----------------|-------------------------------|-----------------------------|
-|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
-|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
-|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
-
-
-## KaTeX
-
-You can render LaTeX mathematical expressions using [KaTeX](https://khan.github.io/KaTeX/):
-
-The *Gamma function* satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
-
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
-
-> You can find more information about **LaTeX** mathematical expressions [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
-
-
-## UML diagrams
-
-You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
-
-```mermaid
-sequenceDiagram
-Alice ->> Bob: Hello Bob, how are you?
-Bob-->>John: How about you John?
-Bob--x Alice: I am good thanks!
-Bob-x John: I am good thanks!
-Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
-
-Bob-->Alice: Checking with John...
-Alice->John: Yes... John, how are you?
+# Validar la versión de minishift
+$ minishift version
+minishift v1.34.2+83ebaab
 ```
 
-And this will produce a flow chart:
 
-```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
+## Configurar primera ejecución de minishift
+
+Ejecutar los siguientes comandos para configurar la primera ejecución de minishift
+
+**Nota**: Estos comandos sólo se ejecuta una vez, para posteriores ejecuciones es suficiente con ejecutar los comandos del paso posterior a éste.
+
+```bash
+$ minishift profile set istio-demo
+$ minishift config set memory 8GB
+$ minishift config set cpus 4
+$ minishift config set vm-driver virtualbox
+$ minishift config set image-caching true
+$ minishift addon enable admin-user
+$ minishift config set openshift-version v3.11.0
 ```
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMDc5NjAxMiwxMDA1OTM4ODIxLC00Mz
-UyMjA3MDksNjA0MzY1MzI2LDE2MzI4OTY0NDksNzQwMTA0MTI0
-LDEyNTg4MjI4OTddfQ==
--->
+## Levantar el cluster de minishift
+
+```bash
+# La primera vez que se ejecuta el comando start se descargan tanto la imagen 
+# de centos para crear la VM como los binarios de OpenShift.
+$ minishift start
+...
+OpenShift server started.
+
+The server is accessible via web console at:
+    https://IP:8443/console
+
+You are logged in as:
+    User:     developer
+    Password: <any value>
+
+To login as administrator:
+    oc login -u system:admin
+
+# Una vez levantado el cluster de minishift ejecutar:
+$ minishift addon apply admin-user
+$ minishift ssh -- sudo setenforce 0
+$ minishift addon apply anyuid
+```
+### Validar la instalación de la consola de minishift
+
+Para validar la correcta instalación de la consola abrir un browser e ingresar la URL devuelta en el paso anterior https://IP:8443/console donde IP es la dirección IP del cluster de minishift.
+
+### Configurar la variable PATH
+
+Si se decide agregar el PATH del comando oc al archivo .bashrc este paso sólo se realiza una vez, en caso contrario cada vez que se inicie sesión deberá ejecutarse los comandos correspondientes.
+
+```bash
+# Ejecutar y agregar la salida al archivo .bashrc
+# recordar que una vez que se haya modificado el archivo .bashrc 
+# hay que ejecutar:
+# $ cd
+# $ . ./.bashrc
+$ minishift oc-env
+
+# En su caso ejecutar el siguiente comando, sin embargo se tiene que 
+# ejecutar cada vez que se inicie sesión en una terminal.
+$ eval $(minishift oc-env)
+```
+
+### Conectarse al cluster de minishift
+
+```bash
+$ oc login -u system:admin -n default
+```
+
+
+# Instalación de Istio
+
+## Descargar Istio Service Mesh
+
+```bash
+$ cd  ~/installMinishift
+$ wget https://github.com/istio/istio/releases/download/1.4.5/istio-1.4.5-linux.tar.gz
+$ tar zxvf istio-1.4.5-linux.tar.gz
+
+$ cd istio-1.4.5/
+```
+
+## Configurar la variable PATH
+Se requiere agregar a la variable PATH la ruta donde se encuentra el archivo binario 
+
+```bash
+# Recuperar la salida del siguiente comando:
+$ pwd
+
+# Agregar la variable ISTIO_HOME en el archivo .bashrc 
+# y modificar la variable PATH
+export ISTIO_HOME=[salida_del_comando_pwd]
+export PATH=$ISTIO_HOME/bin:$PATH
+
+# Una vez modificado el archivo .bashrc ejecutar:
+
+$ cd
+$ . ./.bashrc
+```
+
+## Desplegar los pods de istio en minishift
+
+```bash
+$ cd ~/installMinishift/istio-1.4.5/
+
+$ oc login -u system:admin -n default
+$ for i in install/kubernetes/helm/istio-init/files/crd*yaml; do oc apply -f $i; done
+$ oc apply -f install/kubernetes/istio-demo.yaml
+
+$ oc adm policy add-scc-to-user anyuid -z default -n istio-system
+$ oc adm policy add-scc-to-group anyuid system:serviceaccounts -n istio-system
+```
+
+## Levantar servicios básicos
+
+```bash
+# Cambiarse al proyecto istio-system
+
+$ oc project istio-system
+
+$ oc expose svc istio-ingressgateway --port=80
+$ oc expose svc grafana
+$ oc expose svc prometheus
+$ oc expose svc tracing
+$ oc expose service kiali --path=/kiali
+$ oc adm policy add-cluster-role-to-user admin system:serviceaccount:istio-system:kiali-service-account -z default
+
+# Verificar el estado de los pods
+
+$ oc get pods
+
+# El proceso puede tardar unos minutos, al final la salida de comando anterior debería verse como:
+
+NAME                                      READY     STATUS      RESTARTS   AGE
+grafana-6f6bdfc4d9-k5b9r                  1/1       Running     0          4m
+istio-citadel-5ddf4c9cd6-9q4d6            1/1       Running     0          4m
+istio-egressgateway-8658b5cf55-9mbg2      1/1       Running     0          4m
+istio-galley-6576f455c8-hzrp8             1/1       Running     0          4m
+istio-grafana-post-install-1.4.5-swpkc    0/1       Completed   0          4m
+istio-ingressgateway-7cd84b884d-dtqmt     1/1       Running     0          4m
+istio-pilot-c56b46dc6-9r67d               2/2       Running     3          4m
+istio-policy-5978bd75dc-lcg5c             2/2       Running     1          4m
+istio-security-post-install-1.4.5-9mtrx   0/1       Completed   0          4m
+istio-sidecar-injector-6c6f49cb85-8nm68   1/1       Running     0          4m
+istio-telemetry-64477d66d5-z9rc4          2/2       Running     1          4m
+istio-tracing-7dd9b9548f-bbq8p            1/1       Running     0          4m
+kiali-ffff7c54d-8xlmh                     1/1       Running     0          4m
+prometheus-79876855d8-c6678               1/1       Running     0          4m
+```
