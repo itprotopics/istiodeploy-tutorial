@@ -10,9 +10,7 @@ El tutorial supone que en el equipo host está instalado [Oracle Virtual Box](ht
 # Tabla de contenido
 
 
-
-[TOC]
-
+[[TOC]]
 
 
 # Instalación de docker-ce
