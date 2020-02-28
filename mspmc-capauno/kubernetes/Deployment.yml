@@ -24,7 +24,7 @@ spec:
         - name: JAVA_OPTIONS
           value: -Xms15m -Xmx15m -Xmn15m
         name: mspmccapauno
-        image: tutorial/mspmccapauno
+        image: example/mspmccapauno
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080

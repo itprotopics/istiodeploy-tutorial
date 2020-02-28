@@ -11,6 +11,11 @@ management:
   endpoint:
     health:
       enabled: false
-    jokolia:
-      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*,jolokia"
+  server:
+    port: 8778
 
+        
